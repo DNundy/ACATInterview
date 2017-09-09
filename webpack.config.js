@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-07 20:39:02
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-08 10:14:07
+* @Last Modified time: 2017-09-09 16:48:04
 */
 var webpack				= require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
@@ -25,12 +25,13 @@ var config = {
 	entry : {
 		'index' 			: "page/index/index.js",
 		'apply' 			: "page/apply/index.js",
+		'interview' 		: "page/interview/index.js",
 		'common' 			: ["page/common/index.js"]
 	},
 
 	output : {
 		path 			: path.resolve(__dirname,"public"),/*必须是绝对路径*/
-		publicPath 		: '/',
+		publicPath 		: '/system/public/',
 		filename 		: "js/[name].js"
 	},
 
@@ -57,7 +58,8 @@ var config = {
 			filename : 	"js/common.js"
 		}),
 		new htmlWebpackPlugin(getHtmlConfig('index',"首页")),
-		new htmlWebpackPlugin(getHtmlConfig('apply',"加入我们"))
+		new htmlWebpackPlugin(getHtmlConfig('apply',"加入我们")),
+		new htmlWebpackPlugin(getHtmlConfig('interview',"进入面试"))
 	],
 
 	module: {

@@ -2,48 +2,51 @@
 <html lang="zh-CN">
 <head>
 <%= require('html-loader!./layout/meta.html') %>
-<title><%= htmlWebpackPlugin.options.title %> —— ACAT</title>
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+<title><%= htmlWebpackPlugin.options.title %> — ACAT</title>
 <link href="https://cdn.bootcss.com/animate.css/3.3.0/animate.min.css" rel="stylesheet">
 <link href="https://cdn.bootcss.com/normalize/3.0.2/normalize.min.css" rel="stylesheet">
 <link href="https://cdn.bootcss.com/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
 <link href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
 </head>
 <body id="top">
-    <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 <%= require('html-loader!./layout/header.html') %>
-
-    <section class="intro section-padding">
+    <section class="intro section-padding" id="summary">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 intro-feature">
-                    <div class="intro-icon">
-                        <span data-icon="&#xe033;" class="icon"></span>
-                    </div>
-                    <div class="intro-content">
-                        <h5>Easily Customised</h5>
-                        <p>Easily customise Sedna to suit your start up, portfolio or product. Take advantage of the layered Sketch file and bring your product to life.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 intro-feature">
+                <div class="col-md-3 intro-feature">
                     <div class="intro-icon">
                         <span data-icon="&#xe030;" class="icon"></span>
                     </div>
                     <div class="intro-content">
-                        <h5>Modern Design</h5>
-                        <p>Designed with modern trends and techniques in mind, Sedna will help your product stand out in an already saturated market.</p>
+                        <h5>Java</h5>
+                        <p>Java是一门面向对象编程语言具有功能强大和简单易用两个特征。是面向对象编程语言的代表，极好地实现了面向对象理论</p>
                     </div>
                 </div>
-                <div class="col-md-4 intro-feature">
+                <div class="col-md-3 intro-feature">
+                    <div class="intro-icon">
+                        <span data-icon="&#xe033;" class="icon"></span>
+                    </div>
+                    <div class="intro-content">
+                        <h5>PHP</h5>
+                        <p>一种通用开源脚本语言。语法吸收了C语言、Java和Perl的特点，利于学习，使用广泛，主要适用于Web开发领域。</p>
+                    </div>
+                </div>
+                <div class="col-md-3 intro-feature">
                     <div class="intro-icon">
                         <span data-icon="&#xe046;" class="icon"></span>
                     </div>
                     <div class="intro-content last">
-                        <h5>Responsive Development</h5>
-                        <p>Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun.</p>
+                        <h5>Web前端</h5>
+                        <p>前端技术一般分为前端设计和前端开发，前端设计一般可以理解为网站的视觉设计，前端开发则是网站的前台代码实现</p>
+                    </div>
+                </div>
+                <div class="col-md-3 intro-feature">
+                    <div class="intro-icon">
+                        <span data-icon="&#xe046;" class="icon"></span>
+                    </div>
+                    <div class="intro-content last">
+                        <h5>Python</h5>
+                        <p>是一种面向对象的解释型计算机程序设计语言，由荷兰人Guido van Rossum于1989年发明，第一个公开发行版发行于1991年</p>
                     </div>
                 </div>
             </div>
@@ -55,7 +58,7 @@
             <div class="row">
                 <div class="col-md-5 col-md-offset-7">
                     <div class="feature-list">
-                        <h3>Sedna will drive your product forward</h3>
+                        <h3>java</h3>
                         <p>Present your product, start up, or portfolio in a beautifully modern way. Turn your visitors in to clients.</p>
                         <ul class="features-stack">
                             <li class="feature-item">
@@ -90,7 +93,6 @@
                 </div>
             </div>
         </div>
-        <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
         <div class="device-showcase">
             <div class="devices">
                 <div class="ipad-wrap wp1"></div>
@@ -184,7 +186,7 @@
     </section>
 
 
-<!--     <section class="hero-strip section-padding">
+<section class="hero-strip section-padding">
         <div class="container">
             <div class="col-md-12 text-center">
                 <h2>
@@ -321,7 +323,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
 <%= require('html-loader!./layout/footer.html') %>
 <script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>

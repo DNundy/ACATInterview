@@ -2,39 +2,62 @@
 <html lang="zh-CN">
 <head>
 <%= require('html-loader!./layout/meta.html') %>
-<title><%= htmlWebpackPlugin.options.title %> —— ACAT</title>
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-<link href="https://cdn.bootcss.com/animate.css/3.3.0/animate.min.css" rel="stylesheet">
-<link href="https://cdn.bootcss.com/normalize/3.0.2/normalize.min.css" rel="stylesheet">
-<link href="https://cdn.bootcss.com/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
-<link href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+<title><%= htmlWebpackPlugin.options.title %> — ACAT</title>
 </head>
 <body id="top">
-    <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 <%= require('html-loader!./layout/header-simple.html') %>
-<p>asdasda </p>
-<p>asdasda </p>
-<p>asdasda </p>
-<p>asdasda </p>
-<p>asdasda </p>
-<p>asdasda </p>
-<p>asdasda </p>
-<p>asdasda </p>
-<p>asdasda </p>
-<p>asdasda </p>
-<p>asdasda </p>
-<p>asdasda </p>
-<p>asdasda </p>
+<div class="wthree-dot">
+	<div class="profile">
+		<div class="wrap">
+			<div class="contact-form">
+		        <form action="" method="post" class="form-signin">
+		            <h2> ACAT纳新报名 </h2>
+		            <input type="text" name="stu_name" id="stu_name" class="form-control" 
+		            placeholder="姓名:" required autofocus value="詹永东" />
 
+		            <input type="text" name="stu_num" id="stu_num" class="form-control" 
+		            placeholder="学号:" required value="04152104"/>
+
+		            <input type="text" name="tel" id="tel" class="form-control" 
+		            placeholder="电话:" required value="12312341234" />
+
+		            <div id="sex" class="form-control">
+		                <label class="radio-inline">性别:</label>
+
+		                <label class="radio-inline">
+		                    <input type="radio" name="sex" id="inlineRadio1" value="1" checked>男
+		                </label>
+
+		                <label class="radio-inline">
+		                    <input type="radio" name="sex" id="inlineRadio2" value="2">女
+		                </label>
+		            </div>
+
+		            <input type="text" name="major" id="major" class="form-control" 
+		            placeholder="专业班级:" required value="网络1234"/>
+
+		            <input type="email" name="email" id="email" class="form-control" 
+		            placeholder="电子邮箱:" required value="12312341234@qq.com"/>
+
+		            <p class="choice-p">预期方向选择:</p>
+
+		            <select name="choice" class="form-control" id="choice">
+		                <option>JAVA方向</option>
+		                <option>WEB前端</option>
+		                <option>PHP方向</option>
+		            </select>
+
+		            <p class="introd-p">自我介绍:</p>
+
+		            <textarea class="form-control" name="self_introd" id="self_introd" rows="5">asd</textarea>
+
+		            <button class="btn btn-lg  btn-block" id="submitBtn" type="button" >提交
+		            </button>
+		        </form>
+			</div>
+		</div>
+	</div>
+</div>
 <%= require('html-loader!./layout/footer.html') %>
-<script src="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-<script src="https://cdn.bootcss.com/flexslider/2.5.0/jquery.flexslider.min.js"></script>
-<script src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
-<script src="https://cdn.bootcss.com/retina.js/1.3.0/retina.min.js"></script>
-<script src="https://cdn.bootcss.com/classie/1.0.1/classie.min.js"></script>
-<script src="https://cdn.bootcss.com/waypoints/3.1.1/jquery.waypoints.min.js"></script>
 </body>
 </html>
