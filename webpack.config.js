@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-07 20:39:02
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-13 19:55:13
+* @Last Modified time: 2017-09-14 18:38:04
 */
 var webpack				= require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
@@ -31,6 +31,7 @@ var config = {
 		'onGoing' 			: "page/onGoing/index.js",
 		'examiners' 		: "page/examiners/index.js",
 		'loginIn' 			: "page/loginIn/index.js",
+		'results' 			: "page/results/index.js",
 		'common' 			: ["page/common/index.js"]
 	},
 
@@ -69,6 +70,7 @@ var config = {
 		new htmlWebpackPlugin(getHtmlConfig('interviewInfo',"面试信息")),
 		new htmlWebpackPlugin(getHtmlConfig('examiners',"考官入口")),
 		new htmlWebpackPlugin(getHtmlConfig('onGoing',"正在面试")),
+		new htmlWebpackPlugin(getHtmlConfig('results',"信息统计")),
 		new htmlWebpackPlugin(getHtmlConfig('loginIn',"成员登陆"))
 	],
 

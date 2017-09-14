@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-09 15:27:50
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-13 21:00:55
+* @Last Modified time: 2017-09-14 18:53:23
 */
 var _tool = require('tool/baseTool.js');
 var _interview = {
@@ -83,6 +83,14 @@ var _interview = {
     flow : function (resolve,reject) {
         _tool.request({
             url     : _tool.getServerUrl('server/interview/flow.php'),
+            method  : 'post',
+            success : resolve,
+            error   : reject
+        });
+    },
+    results : function (resolve,reject) {
+        _tool.request({
+            url     : _tool.getServerUrl('server/interview/results.php'),
             method  : 'post',
             success : resolve,
             error   : reject

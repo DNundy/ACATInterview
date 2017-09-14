@@ -1,0 +1,70 @@
+<div class="w3l-contact-left">
+    {{#passTotal}}
+    <form class="form-signin">
+        <h2>总共通过学生，共{{passTotalNum}}人</h2>
+        <h2>JAVA通过{{javaNum}}人</h2>
+        {{#aJAVA}}
+            <input type="text" class="form-control" disabled value="姓名:{{stu_name}}.{{tel}}"/>
+            <input type="text" class="form-control" disabled value="一面成绩:{{f_grade}}" />
+            <input type="text" class="form-control" disabled value="二面成绩:{{s_grade}}" />
+            <input type="text" class="form-control" disabled value="三面成绩:{{t_grade}}" />
+            <br/><br/>
+        {{/aJAVA}}
+
+        <h2>前端通过{{webNum}}人</h2>
+        {{#aWEB}}
+            <input type="text" class="form-control" disabled value="姓名:{{stu_name}}.{{tel}}"/>
+            <input type="text" class="form-control" disabled value="一面成绩:{{f_grade}}" />
+            <input type="text" class="form-control" disabled value="二面成绩:{{s_grade}}" />
+            <input type="text" class="form-control" disabled value="三面成绩:{{t_grade}}" />
+            <br/><br/>
+        {{/aWEB}}
+
+        <h2>PHP通过{{phpNum}}人</h2>
+        {{#aPHP}}
+            <input type="text" class="form-control" disabled value="姓名:{{stu_name}}.{{tel}}"/>
+            <input type="text" class="form-control" disabled value="一面成绩:{{f_grade}}" />
+            <input type="text" class="form-control" disabled value="二面成绩:{{s_grade}}" />
+            <input type="text" class="form-control" disabled value="三面成绩:{{t_grade}}" />
+            <br/><br/>
+        {{/aPHP}}
+
+        <h2>C++通过{{cNum}}人</h2>
+        {{#aC}}
+            <input type="text" class="form-control" disabled value="姓名:{{stu_name}}.{{tel}}"/>
+            <input type="text" class="form-control" disabled value="一面成绩:{{f_grade}}" />
+            <input type="text" class="form-control" disabled value="二面成绩:{{s_grade}}" />
+            <input type="text" class="form-control" disabled value="三面成绩:{{t_grade}}" />
+            <br/><br/>
+        {{/aC}}
+    </form>
+    {{/passTotal}}
+    {{^passTotal}}
+        <h2>暂无通过学生</h2>
+    {{/passTotal}}
+
+
+
+
+    {{#noPassTotal}}
+        <form class="form-signin">
+            <h2>未通过学生，共{{noPassTotalNum}}人</h2>
+            {{#noPass}}
+                <input type="text" class="form-control" disabled value="姓名:{{stu_name}}.{{tel}}"/>
+            {{/noPass}}
+        </form>
+    {{/noPassTotal}}
+    {{^noPassTotal}}
+        <h2>暂无未通过学生</h2>
+    {{/noPassTotal}}
+
+
+
+
+    {{#noSignTotal}}
+        <h2>未签到学生，共{{noSignTotalNum}}人</h2>
+    {{/noSignTotal}}
+    {{^noSignTotal}}
+        <h2>暂无未签到学生</h2>
+    {{/noSignTotal}}
+</div>
