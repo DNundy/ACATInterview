@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-07 23:07:05
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-08 14:00:18
+* @Last Modified time: 2017-09-09 19:37:08
 */
 require('./index.css');
 var page = {
@@ -20,14 +20,13 @@ var page = {
         $('.single_image').fancybox({
             padding: 4,
         });
-
+        
         $('[data-toggle="tooltip"]').tooltip();
     },
     bindEvent : function () {
         /*Header BG Scroll*/
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
-
             if (scroll >= 20) {
                 $('section.navigation').addClass('fixed');
                 $('header').css({
@@ -52,33 +51,6 @@ var page = {
                 $('header .navicon').css({
                     "top": "48px",
                 });
-            }
-        });
-
-        /* clicks the Icon */
-        $('.nav-toggle').click(function() {
-            $(this).toggleClass('active');
-            $('.header-nav').toggleClass('open');
-            event.preventDefault();
-        });
-
-        /* clicks a link */
-        $('.header-nav li a').click(function() {
-            $('.nav-toggle').toggleClass('active');
-            $('.header-nav').toggleClass('open');
-
-        });
-
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 2000);
-                    return false;
-                }
             }
         });
     },

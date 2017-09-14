@@ -15,15 +15,15 @@ if($result->num_rows){
 	$group_id = $result->fetch_assoc();
 	$_SESSION['group_id'] = $group_id['group_id'];//将面试组id保存在session中
 	$return =  array('code' => -1,
-		'code' => 0,
-		'msg' => '登陆成功！', 
-		);
+	'status' => 0,
+	'msg' => '登陆成功,三秒后将自动跳转！', 
+	);
 }
 else{
 	$return =  array(
-		'code' => -1,
-		'msg' => '验证码有误，请重新输入！', 
-		);
+	'status' => -1,
+	'msg' => '验证码有误，请重新输入！', 
+	);
 }
 echo json_encode($return);
 $conn->close();

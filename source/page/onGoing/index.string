@@ -1,0 +1,68 @@
+<form class="form-signin">
+    <div class="w3l-contact-left">
+        <h2>{{ status }}</h2>
+
+        <input type="text" class="form-control" disabled value="姓名：	{{stu_name}}" />
+
+        <input type="text" class="form-control" disabled value="学号：	{{stu_num}}"/>
+
+        <input type="text" class="form-control" disabled value="电话：	{{tel}}" />
+
+        <div id="sex" class="form-control">
+            <label class="radio-inline">性别： </label>
+            <label class="radio-inline">
+                <input type="radio" checked />{{sex}}
+            </label>
+        </div>
+
+        <input type="text" class="form-control" disabled value="专业：	{{major}}"/>
+
+        <input type="text" class="form-control"  disabled value="专业：	{{choice}}" />
+
+        <input type="email" class="form-control" disabled value="邮箱：	{{email}}"/>
+
+        <p id="textarea" class="form-control">{{self_introd}}</p>
+    </div>
+    <div class="w3l-contact-right">
+        <h2>评审信息</h2>
+
+        {{^f_grade}}
+            <input type="text" class="form-control oneScore" style="text-align: center;" placeholder="请一审评委打分：" />
+            <textarea id="textarea" class="form-control oneAppraise" placeholder="请填写一审评价！" ></textarea>
+        {{/f_grade}}
+
+        {{#f_grade}}
+            <input type="text" class="form-control" disabled style="text-align: center;" value="一审成绩：{{f_grade}}"/>
+            <textarea id="textarea" disabled class="form-control">一审评语：{{f_remarks}}</textarea>
+
+            {{#s_grade}}
+                <input type="text" class="form-control" disabled style="text-align: center;" value="二审成绩：{{s_grade}}" />
+                <textarea id="textarea" disabled class="form-control">二审评语：{{s_remarks}}</textarea>
+
+                {{#t_grade}}
+                    <input type="text" class="form-control" disabled style="text-align: center;" value="三审成绩：{{t_grade}}"/>
+                    <textarea id="textarea" disabled class="form-control">三审评语：{{t_remarks}}</textarea>
+                {{/t_grade}}
+
+                {{^t_grade}}
+                    <input type="text" class="form-control threeScore" style="text-align: center;" placeholder="请三审评委打分：" />
+                    <textarea id="textarea" class="form-control threeAppraise" placeholder="请填写三审评价！"></textarea>
+                {{/t_grade}}
+            {{/s_grade}}
+
+            {{^s_grade}}
+                <input type="text" class="form-control twoScore" style="text-align: center;" placeholder="请二审评委打分：" />
+                <textarea id="textarea" class="form-control twoAppraise" placeholder="请填写二审评价！" ></textarea>
+            {{/s_grade}}
+        {{/f_grade}}
+            <div id="lastChoose">
+                <label class="radio-inline" id="passLabel">
+                    <input type="radio" value="0" name="resultbtn" id="pass"/>通过
+                </label>
+                <label class="radio-inline"  id="vetoLabel">
+                    <input type="radio" value="-1" name="resultbtn" id="veto"/>否决
+                </label>
+            </div>
+        <button class="btn btn-lg  btn-block" id="submitBtn" type="button">立即提交</button>
+    </div>
+</form>

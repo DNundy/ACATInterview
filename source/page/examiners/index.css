@@ -1,3 +1,61 @@
+/*
+* @Author: Administrator
+* @Date:   2017-09-09 20:29:04
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-09-09 21:00:44
+*/
+body{
+    margin: 0;
+    background: url(../../assets/applyBg.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.wrap {
+    width: 30%;
+    height: 60%;
+    margin: 2em auto 0;
+}
+.wrap button{
+    outline: none !important;
+    margin: 15% 0 15%;
+}
+.to-top{
+    display: none;
+}
+#quit{
+	color: white;
+	border: 1px solid #EB7F52;
+	background: #EB7F52;
+}
+#quit:hover{
+	box-shadow: 1px 1px 1px #fff;
+}
+
+@media(max-width:1280px){
+    .wrap {
+        width: 90%;
+    }
+}
+@media(max-width:1080px){
+    .wrap {
+        width: 70%;
+    }
+}
+@media(max-width:900px){
+    .wrap {
+        width: 80%;
+    }
+}
+@media(max-width:667px){
+    .wrap {
+        width: 90%;
+    }
+}
+@media(max-width:600px){
+    body {
+        padding: 0;
+    }
+}
 @media screen and (max-width:1200px)
 {
     header
@@ -284,205 +342,5 @@
         {
             display: none;
         }
-    }
-}
-
-/* form */
-body{
-    margin: 0;
-    background: url(../../assets/applyBg.jpg) no-repeat center center;
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: 'Open Sans', sans-serif;
-}
-a{
-    transition: 0.5s all;
-  -webkit-transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -o-transition: 0.5s all;
-}
-a:hover{
-    transition: 0.5s all;
-  -webkit-transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -o-transition: 0.5s all;
-}
-.wrap {
-    width: 30%;
-    margin: 2em auto 0;
-}
-.profile{
-    height: auto;
-}
-.contact-form{
-     height: auto;
-     margin-bottom: 2em;
-}
-/*--profile start here--*/
-h2 {
-   font-size: 2em;
-    color: #ffffff;
-    text-align: center;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-::-webkit-input{
-    color:#FFFFFF !important;
-}
-
-.contact-form{
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0 ;
-}
-.contact-form input[type="text"],.contact-form input[type="email"],.contact-form #sex,.contact-form textarea{
-    font-size: .9em;
-    color: #999999;
-    padding: 0.5em 1em;
-    margin: 1em 0;
-    border: 0;
-    width: 100%;
-    border-bottom: 1px solid #dcdcdc;
-    background: none;
-    -webkit-appearance: none;
-    outline: none;
-}
-.contact-form #sex{
-    width: 100%;
-    padding-left: 0;
-    border-radius: 0;
-}
-/* 表单统一样式 */
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-/* 表单分类样式 */
-.form-signin input[type="text"] {
-    outline: none;
-    font-family: '楷体';
-    font-weight: 600;
-    font-size: 18px;
-    margin-bottom: 10px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.form-signin input[type="email"] {
-  font-family: '楷体';
-  font-weight: 600;
-  font-size: 18px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.choice-p,.introd-p{
-  margin: 0 20px;
-  color: #999;
-  font-family: '楷体';
-  font-weight: 600;
-  font-size: 18px;
-}
-.form-signin textarea{
-  border: 1px dashed #999;
-  margin-bottom: 10px;
-  outline: none;
-  resize:none;
-  text-indent: 2em;
-}
-.form-signin select{
-  margin-top: 20px;
-  font-family: '楷体';
-  font-weight: 600;
-  font-size: 18px;
-  background: rgba(0, 0, 0, 0.05);
-  text-indent: 0.5em;
-}
-.form-signin select option{
-    width: 100%;
-}
-div#sex label{
-  color: #999;
-  font-family: '楷体';
-  font-weight: 600;
-  font-size: 18px;
-  height:25px;
-  line-height: 25px;
-  text-align:left;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-p{
-  height:25px;
-  line-height:25px;
-  position: relative;
-  top:10px;
-}
-#submitBtn{
-    margin-top: 20px;
-    border: 0px;
-    outline: none;
-}
-/*-- responsive --*/
-@media(max-width:1280px){
-    .wrap {
-        width: 60%;
-    }
-}
-@media(max-width:1080px){
-    .wrap {
-        width: 70%;
-    }
-}
-@media(max-width:900px){
-    .wrap {
-        width: 80%;
-    }
-}
-@media(max-width:667px){
-    .wrap {
-        width: 90%;
-    }
-}
-@media(max-width:600px){
-    body {
-        padding: 0;
-    }
-}
-@media(max-width:568px){
-    .contact-form {
-        background: rgba(0, 0, 0, 0.5);
-        margin-bottom: 2em;
-    }
-}
-@media(max-width:480px){
-    .contact-form textarea {
-        min-height: 16em;
-    }
-    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
-        width: 100%;
-    }
-    .contact-form input[type="submit"] {
-        padding: .8em 3em;
-    }
-}
-@media(max-width:414px){
-}
-@media(max-width:375px){
-}
-@media(max-width:320px){
-    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
-        width: 100%;
     }
 }

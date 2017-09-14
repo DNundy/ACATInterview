@@ -2,48 +2,18 @@
 * @Author: Nudny
 * @Date:   2017-09-07 23:07:05
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-09 16:30:47
+* @Last Modified time: 2017-09-09 21:38:37
 */
 require('./index.css');
-var _tool 	= require('tool/baseTool.js');
-var _apply 	= require('service/apply-service.js');
+var _tool 		= require('tool/baseTool.js');
+var _interview 	= require('service/interview-service.js');
 
 var page={
 	init : function() {
-		this.ready();
 		this.bindEvent();
 	},
-	ready : function() {
-		$('[data-toggle="tooltip"]').tooltip();
-	},
 	bindEvent : function () {
-		/*缓存this对象*/
 		var _this = this;
-
-		/*移动端列表图标*/
-		$('.nav-toggle').click(function() {
-			$(this).toggleClass('active');
-			$('.header-nav').toggleClass('open');
-			event.preventDefault();
-		});
-		$('.header-nav li a').click(function() {
-			$('.nav-toggle').toggleClass('active');
-			$('.header-nav').toggleClass('open');
-
-		});
-		$('a[href*=#]:not([href=#])').click(function() {
-			if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-				var target = $(this.hash);
-				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-				if (target.length) {
-					$('html,body').animate({
-						scrollTop: target.offset().top
-					}, 2000);
-					return false;
-				}
-			}
-		});
-
 		/*提交申请信息*/
 		$("#submitBtn").click(function(){
 			/*获取数据*/
@@ -64,9 +34,10 @@ var page={
 
 			/*执行请求或提示错误*/
 			if(result.status === true){
-				_apply.applySubmit(applyData,
+				_interview.applySubmit(applyData,
 				function (res) {
-					_tool.tips(res);
+					var htmlTemp='</br></br><a class="btn btn-lg  btn-block" href="./interviewEntry.html">查看面试</a>';
+					_tool.tips(res+htmlTemp);
 				},
 				function (err) {
 					_tool.tips(err);

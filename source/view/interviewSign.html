@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<%= require('html-loader!./layout/meta.html') %>
+<title><%= htmlWebpackPlugin.options.title %> — ACAT</title>
+</head>
+<body id="top">
+<%= require('html-loader!./layout/header-simple.html') %>
+<div class="wthree-dot">
+	<div class="profile">
+		<div class="wrap">
+			<div class="contact-form">
+		        <form class="form-signin">
+		            <h2> 考生签到 </h2>
+		            <input type="text" name="passphrase" id="stu_name" class="form-control" required  placeholder="请输入您的姓名" />
+		            <input type="text" name="passphrase" id="stu_num" class="form-control" required  placeholder="请输入您的学号" />
+
+		            <button class="btn btn-lg  btn-block" id="submitBtn" type="button" >立即签到
+		            </button>
+		        </form>
+			</div>
+		</div>
+	</div>
+</div>
+<%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

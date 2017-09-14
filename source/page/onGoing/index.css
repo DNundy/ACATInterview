@@ -1,3 +1,9 @@
+/*
+* @Author: Administrator
+* @Date:   2017-09-10 11:37:52
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-09-12 20:40:04
+*/
 @media screen and (max-width:1200px)
 {
     header
@@ -308,7 +314,7 @@ a:hover{
   -o-transition: 0.5s all;
 }
 .wrap {
-    width: 30%;
+    width: 70%;
     margin: 2em auto 0;
 }
 .profile{
@@ -317,6 +323,7 @@ a:hover{
 .contact-form{
      height: auto;
      margin-bottom: 2em;
+     overflow: hidden;
 }
 /*--profile start here--*/
 h2 {
@@ -330,13 +337,40 @@ h2 {
 ::-webkit-input{
     color:#FFFFFF !important;
 }
-
+/* 
 .contact-form{
+    width: 100%;
     background: rgba(0, 0, 0, 0.5);
     padding: 0 ;
 }
-.contact-form input[type="text"],.contact-form input[type="email"],.contact-form #sex,.contact-form textarea{
+.w3l-contact-left{
+    float: left;
+    width: 100%;
+    margin: 0 1em 0 0;
+}
+.w3l-contact-right{
+    float: right;
+    width: 49%;
+    border-left: solid 1px #cecece;
+} */
+.contact-form{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3em;
+}
+.w3l-contact-left{
+    float: left;
+    width: 47%;
+    margin: 0 1em 0 0;
+}
+.w3l-contact-right{
+    color: #999;
+    float: right;
+    width: 40%;
+}
+.contact-form input[type="text"],.contact-form input[type="email"],.contact-form #sex,.contact-form #textarea,.contact-form textarea{
     font-size: .9em;
+    font-family: '楷体';
     color: #999999;
     padding: 0.5em 1em;
     margin: 1em 0;
@@ -353,11 +387,6 @@ h2 {
     border-radius: 0;
 }
 /* 表单统一样式 */
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
 .form-signin .form-control {
   position: relative;
   height: auto;
@@ -394,7 +423,7 @@ h2 {
   font-weight: 600;
   font-size: 18px;
 }
-.form-signin textarea{
+.form-signin #textarea,textarea{
   border: 1px dashed #999;
   margin-bottom: 10px;
   outline: none;
@@ -429,10 +458,22 @@ p{
   position: relative;
   top:10px;
 }
+#textarea,textarea{
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+}
 #submitBtn{
-    margin-top: 20px;
-    border: 0px;
-    outline: none;
+  outline: none;
+  margin-top: 15px;
+}
+#passLabel{
+  margin-left: 20%;
+  float: left;
+}
+#vetoLabel{
+  margin-right: 20%;
+  float: right;
 }
 /*-- responsive --*/
 @media(max-width:1280px){
@@ -465,12 +506,22 @@ p{
         background: rgba(0, 0, 0, 0.5);
         margin-bottom: 2em;
     }
+    .w3l-contact-left {
+      float: none;
+      width: 100%;
+      margin: 0 0 1em 0;
+    }
+    .w3l-contact-right {
+      float: none;
+      width: 100%;
+      border-left: none;
+    }
 }
 @media(max-width:480px){
-    .contact-form textarea {
+    .contact-form #textarea {
         min-height: 16em;
     }
-    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form #textarea {
         width: 100%;
     }
     .contact-form input[type="submit"] {
@@ -482,7 +533,7 @@ p{
 @media(max-width:375px){
 }
 @media(max-width:320px){
-    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form #textarea {
         width: 100%;
     }
 }

@@ -1,0 +1,52 @@
+<form class="form-signin">
+    <div class="w3l-contact-left">
+        <div class="slide-title">
+            <span>正在面试</span>
+        </div>
+        {{#view_exit}}
+            <div class="slide-container">
+                <ul class="slide-list js-slide-view">
+                    {{#onView}}
+                        <li>
+                            <span>{{group_name}}</span>
+                            <span>{{stu_name}}</span>
+                            <span>{{stu_num}}</span>
+                            <span>{{status}}</span>
+                        </li>
+                    {{/onView}}
+                </ul>
+            </div>
+        {{/view_exit}}
+        {{^view_exit}}
+            <p class="tips tipsStatus">暂无面试人员！</p>
+        {{/view_exit}}
+        {{#viewOmit}}
+            <p class="tips tipsNum">后面共有{{waitOmitNum}}位正在面试中！</p>
+        {{/viewOmit}}
+    </div>
+    <div class="w3l-contact-right">
+        <div class="slide-title">
+            <span>等待面试</span>
+        </div>
+        {{#wait_exit}}
+            <div class="slide-container">
+                <ul class="slide-list js-slide-wait">
+                    {{#onWait}}
+                        <li>
+                            <span>{{id}}</span>
+                            <span>{{stu_name}}</span>
+                            <span>{{stu_num}}</span>
+                            <span>{{status}}</span>
+                        </li>
+                    {{/onWait}}
+                </ul>
+            </div>
+        {{/wait_exit}}
+        {{^wait_exit}}
+            <p class="tips tipsStatus">暂无等待面试人员！</p>
+        {{/wait_exit}}
+        {{#waitOmit}}
+            <p class="tips tipsNum">后面共有{{waitOmitNum}}位在等候！</p>
+        {{/waitOmit}}
+    </div>
+</form>

@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-07 20:39:02
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-09 16:48:04
+* @Last Modified time: 2017-09-13 19:55:13
 */
 var webpack				= require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
@@ -25,7 +25,12 @@ var config = {
 	entry : {
 		'index' 			: "page/index/index.js",
 		'apply' 			: "page/apply/index.js",
-		'interview' 		: "page/interview/index.js",
+		'interviewEntry' 	: "page/interviewEntry/index.js",
+		'interviewSign' 	: "page/interviewSign/index.js",
+		'interviewInfo' 	: "page/interviewInfo/index.js",
+		'onGoing' 			: "page/onGoing/index.js",
+		'examiners' 		: "page/examiners/index.js",
+		'loginIn' 			: "page/loginIn/index.js",
 		'common' 			: ["page/common/index.js"]
 	},
 
@@ -59,7 +64,12 @@ var config = {
 		}),
 		new htmlWebpackPlugin(getHtmlConfig('index',"首页")),
 		new htmlWebpackPlugin(getHtmlConfig('apply',"加入我们")),
-		new htmlWebpackPlugin(getHtmlConfig('interview',"进入面试"))
+		new htmlWebpackPlugin(getHtmlConfig('interviewEntry',"面试入口")),
+		new htmlWebpackPlugin(getHtmlConfig('interviewSign',"面试签到")),
+		new htmlWebpackPlugin(getHtmlConfig('interviewInfo',"面试信息")),
+		new htmlWebpackPlugin(getHtmlConfig('examiners',"考官入口")),
+		new htmlWebpackPlugin(getHtmlConfig('onGoing',"正在面试")),
+		new htmlWebpackPlugin(getHtmlConfig('loginIn',"成员登陆"))
 	],
 
 	module: {

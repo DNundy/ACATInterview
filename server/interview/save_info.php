@@ -1,4 +1,4 @@
- <?php
+<?php
 //将面试结果保存到数据库
 include_once "function.php";
 $conn = mysqliConnect();
@@ -19,21 +19,18 @@ if(empty($grade)){
 	$grade = 0;
 }
 $view_result = $_POST['view_result'];//面试结果(0 -> 面试通过  -1 -> 面试未通过)
-// $group_id = 3;
-// $stu_id = 2;//id
-// $status = 2;//面试状态
-// $remarks = 'hahah';//评语
-// $grade = 99;//得分
-// $view_result = 0;//面试结果(0 -> 面试通过  -1 -> 面试未通过)
+
 $query = "select status from interview_info where stu_id=$stu_id";
 $result = $conn->query($query);
 $status_1 = $result->fetch_assoc();
 //避免重复提交
 if($status_1['status'] == ($status+2) || $status_1['status'] == -2){
 	$return = array(
-		'data' => 404,
-		'msg' => '该项面试已提交,请勿重复提交！',
+		'status' => -1,
+		'msg' => '该面试已提交,勿重复提交！',
 	);
+	echo json_encode($return);
+	$conn->close();
 }
 else{
 	$query = "update interview_flow set stu_id=0 where group_id=$group_id";
@@ -48,15 +45,19 @@ else{
 		$result = $conn->query($query);
 		if($result){
 			$return = array(
-				'data' => 0,
-				'msg' => '面试完成'
-				);
+				'status' => 0,
+				'msg' => '辛苦，面试已完成!,三秒后自动返回考官页面！'
+			);
+			echo json_encode($return);
+			$conn->close();
 		}
 		else{
 			$return = array(
-				'data' => -1,
-				'msg' => '发生了不可预知的错误！',
-				);
+				'status' => -1,
+				'msg' => '保存信息发生了错误，请确保您填写了正确的信息或者检查网络后稍后重试！',
+			);
+			echo json_encode($return);
+			$conn->close();
 		}
 	}
 	else if($status == 2){
@@ -69,15 +70,19 @@ else{
 		$result = $conn->query($query);
 		if($result){
 			$return = array(
-				'data' => 0,
-				'msg' => '面试完成'
-				);
+				'status' => 0,
+				'msg' => '辛苦，面试已完成!,三秒后自动返回考官页面！'
+			);
+			echo json_encode($return);
+			$conn->close();
 		}
 		else{
 			$return = array(
-				'data' => -1,
-				'msg' => '发生了不可预知的错误！',
-				);
+				'status' => -1,
+				'msg' => '保存信息发生了错误，请确保您填写了正确的信息或者检查网络后稍后重试！',
+			);
+			echo json_encode($return);
+			$conn->close();
 		}
 	}
 	if($status == 4){
@@ -90,18 +95,20 @@ else{
 		$result = $conn->query($query);
 		if($result){
 			$return = array(
-				'data' => 0,
-				'msg' => '面试完成'
-				);
+				'status' => 0,
+				'msg' => '辛苦，面试已完成!,三秒后自动返回考官页面！'
+			);
+			echo json_encode($return);
+			$conn->close();
 		}
 		else{
 			$return = array(
-				'data' => -1,
-				'msg' => '发生了不可预知的错误！',
-				);
+				'status' => -1,
+				'msg' => '保存信息发生了错误，请确保您填写了正确的信息或者检查网络后稍后重试！',
+			);
+			echo json_encode($return);
+			$conn->close();
 		}
 	}
 }
-echo json_encode($return);
-$conn->close();
 ?>

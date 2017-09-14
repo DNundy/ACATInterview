@@ -13,10 +13,8 @@ $email = $_POST['email'];
 $self_introd = $_POST['self_introd'];
 $sex = $_POST['sex'];
 $choice = $_POST['choice'];
-
-$query = "insert into interview_info(stu_name,stu_num,tel,major,email,self_introd,sex,choice,status) values('$stu_name','$stu_num','$tel','$major','$email','$self_introd',$sex,'$choice',-1)";
+$query = "insert into interview_info(stu_name,stu_num,tel,major,email,self_introd,sex,choice,status) values('$stu_name','$stu_num','$tel','$major','$email','$self_introd','$sex','$choice',-1)";
 $result = $conn->query($query);
-
 if($result){
 	$return = array(
 		'status' => 0,

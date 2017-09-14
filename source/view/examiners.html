@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<%= require('html-loader!./layout/meta.html') %>
+<title><%= htmlWebpackPlugin.options.title %> — ACAT</title>
+</head>
+<body id="top">
+<%= require('html-loader!./layout/header-simple.html') %>
+<section class="wrap">
+	<button class="btn btn-lg btn-block" id="account" class="button">信息统计</button>
+	<button class="btn btn-lg btn-block" id="obtn1" class="button">开始进行一面</button>
+	<button class="btn btn-lg btn-block" id="obtn2" class="button">开始进行二面</button>
+	<button class="btn btn-lg btn-block" id="obtn3" class="button">开始进行三面</button>
+	<button class="btn btn-lg btn-block" id="quit" class="button">退出登录</button>
+</section>
+<%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>
