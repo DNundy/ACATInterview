@@ -529,6 +529,7 @@ header ul.primary-nav
 {
     margin: 0 0 0 75px;
     padding: 0;
+    letter-spacing:3px;
 }
 header ul.primary-nav li
 {
@@ -551,6 +552,7 @@ header ul.primary-nav li:last-child a
 header ul.member-actions li
 {
     display: inline;
+    letter-spacing: 3px;
 }
 header ul.member-actions li a
 {
@@ -690,7 +692,6 @@ Footer
 footer
 {
     position: relative; 
-
     background-color: #3d4351;
 }
 footer p
@@ -709,13 +710,13 @@ footer a:hover
 }
 footer ul.footer-group
 {
-    margin-bottom: 45px; 
-    padding-top: 25px;
-
-    border-top: solid 1px #4e566c;
+    text-align: center;
+    margin-bottom: 20px; 
+    padding-top: 0px;
 }
 footer ul.footer-group li
 {
+    text-align: center;
     display: inline-block;
 }
 footer ul.footer-group li a
@@ -732,90 +733,11 @@ footer ul.footer-group li
 {
     margin-right: 30px;
 }
-footer ul.footer-group li:last-child
-{
-    margin-right: 0;
-}
-footer span.fa-heart
-{
-    font-size: 15px;
-
-    margin: 0 2px; 
-
-    color: #ff415c;
-}
-footer .social-share
-{
-    position: absolute;
-    right: 0;
-
-    width: 40%;
-    height: 100%;
-    padding: 142px 0 0 70px; 
-
-    background-color: #373d4a;
-}
-footer .social-share p
-{
-    padding-bottom: 10px; 
-
-    text-transform: uppercase;
-
-    color: #fff;
-}
-footer .social-share a.twitter-share
-{
-    font-size: 22px;
-
-    display: inline-block;
-
-    width: 60px;
-    height: 60px;
-    margin-right: 20px; 
-
-    text-align: center;
-
-    border-radius: 3px;
-    background-color: #1ab4ef;
-}
-footer .social-share a.twitter-share:hover,
-footer .social-share a.twitter-share:focus
-{
-    background-color: #1590bf;
-}
-footer .social-share a.facebook-share:hover,
-footer .social-share a.facebook-share:focus
-{
-    background-color: #324c85;
-}
-footer .social-share a.facebook-share
-{
-    font-size: 22px;
-
-    display: inline-block;
-
-    width: 60px;
-    height: 60px;
-
-    text-align: center; 
-
-    border-radius: 3px;
-    background-color: #3b5898;
-}
-footer .social-share a
-{
-    color: #fff;
-}
-footer .social-share a:hover
-{
-    color: #fff;
-}
-footer .social-share a i
-{
-    margin-top: 20px;
-}
 footer .footer-links
 {
-    margin: 120px 0 120px 0;
+    margin: 60px 0 20px 0;
 }
-
+footer p{
+  width: 100%;
+  text-align: center;
+}

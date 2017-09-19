@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-07 20:39:02
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-14 18:38:04
+* @Last Modified time: 2017-09-19 15:39:01
 */
 var webpack				= require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
@@ -12,7 +12,7 @@ var WEBPACK_ENV 		= process.env.WEBPACK_ENV || 'dev';
 
 var getHtmlConfig 		= function (name,title) {
 	return {
-		filename 		: "/view/"+name + ".html",
+		filename 		: name + ".html",
 		template 		: "./source/view/"+name + ".html",
 		inject 			: "true",
 		hash 			: "true",

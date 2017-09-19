@@ -2,10 +2,10 @@
 * @Author: Administrator
 * @Date:   2017-09-09 13:13:33
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-13 21:19:14
+* @Last Modified time: 2017-09-17 13:44:19
 */
 var conf = {
-	serverHost : '/System/'
+	serverHost : '/'
 };
 var Hogan = require('hogan.js');
 var _tool = {

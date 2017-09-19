@@ -236,6 +236,15 @@ Features-stack
 
     border-bottom: none;
 }
+.features .ipad1-wrap
+{
+    z-index: 1; 
+
+    width: 706px;
+    height: 1002px;
+
+    background: url('../../assets/java.png') no-repeat center top;
+}
 .features .ipad-wrap
 {
     z-index: 1; 
@@ -243,19 +252,7 @@ Features-stack
     width: 706px;
     height: 1002px;
 
-    background: url('../../assets/ipad-device.png') no-repeat center center;
-}
-.features .iphone-wrap
-{
-    position: absolute;
-    z-index: 2; 
-    bottom: 129px;
-    left: 530px;
-
-    width: 304px;
-    height: 620px;
-
-    background: url('../../assets/iphone6.png') no-repeat center center;
+    background: url('../../assets/php.png') no-repeat center top;
 }
 .features .device-showcase
 {
@@ -287,6 +284,18 @@ Features-stack
 {
     margin-top: 20px;
 }
+.features-extra .macbook1-wrap
+{
+    position: absolute;
+    z-index: 4;
+    top: 114px;
+    left: 50%; 
+
+    width: 916px;
+    height: 540px;
+
+    background: url('../../assets/cpython.png') no-repeat center center;
+}
 .features-extra .macbook-wrap
 {
     position: absolute;
@@ -297,9 +306,11 @@ Features-stack
     width: 916px;
     height: 540px;
 
-    background: url('../../assets/macbook-pro.png') no-repeat center center;
+    background: url('../../assets/web.png') no-repeat center center;
 }
-
+#summary{
+    padding: 120px 0 50 0 !important;
+}
 /* ==========================================================================
 .hero-strip
 ========================================================================== */
@@ -312,24 +323,13 @@ Features-stack
 
     background: #333844 url('../../assets/polygonal-bg.jpg') no-repeat center center;
 }
-.hero-strip i
-{
-    font-family: 'Nunito', sans-serif;
-    font-size: 25px;
-    font-weight: 300;
-    font-style: normal; 
-
-    margin-left: -8px;
-
-    vertical-align: top;
-
-    color: #f69d52;
-}
 .hero-strip h2
 {
     margin: 0 0 20px 0; 
 
     color: #fff;
+
+    line-height: 70px;
 }
 .hero-strip p
 {
@@ -352,271 +352,6 @@ Features-stack
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
 }
-
-/* ==========================================================================
-.blog-intro
-========================================================================== */
-.blog-intro
-{
-    padding-top: 160px;
-}
-.blog-intro h3
-{
-    margin-bottom: 70px;
-}
-.blog-intro .leftcol
-{
-    padding-right: 100px;
-
-    border-right: solid 1px #e6e9ea;
-}
-.blog-intro .rightcol
-{
-    padding-left: 100px;
-}
-
-/* ==========================================================================
-.blog
-========================================================================== */
-.blog
-{
-    padding-bottom: 120px;
-}
-.blog img
-{
-    width: 100%;
-    height: auto;
-
-    -webkit-transition: all 300ms ease-in-out;
-            transition: all 300ms ease-in-out;
-}
-.blog h2
-{
-    font-size: 11px;
-    font-weight: 500;
-
-    margin-top: 35px; 
-
-    text-transform: uppercase;
-
-    color: #acb1b4;
-}
-.blog .btn
-{
-    margin-top: 20px;
-}
-.blog .blog-img-wrap
-{
-    position: relative;
-
-    overflow: hidden;
-}
-.blog .blog-img-wrap .overlay
-{
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    -webkit-transition: all 300ms ease-in-out;
-            transition: all 300ms ease-in-out;
-
-    opacity: 0; 
-    background-color: rgba(255, 255, 255, .5);
-
-    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
-        filter: alpha(opacity=0);
-}
-.blog .blog-img-wrap i
-{
-    font-size: 20px;
-
-    position: absolute;
-    top: 25px;
-    right: 35px; 
-
-    width: 20px;
-    height: 20px;
-
-    color: #fff;
-}
-.blog .blog-img-wrap:hover img,
-.blog .blog-img-wrap:focus img
-{
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
-}
-.blog .blog-img-wrap:hover .overlay,
-.blog .blog-img-wrap:focus .overlay
-{
-    z-index: 9; 
-
-    opacity: 1;
-
-    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=1)';
-        filter: alpha(opacity=1);
-}
-.blog figcaption i
-{
-    font-size: 15px; 
-
-    margin-left: 5px;
-}
-.blog figcaption a.blog-post-title
-{
-    color: rgba(28, 54, 83, .6);
-}
-.blog figcaption a.blog-post-title:hover,
-.blog figcaption a.blog-post-title:focus
-{
-    color: #3d4351;
-}
-
-/* ==========================================================================
-.testimonial-slider
-========================================================================== */
-.testimonial-slider
-{
-    background: url('../../assets/testimonials-bg.jpg') no-repeat center center;
-    background-size: cover;
-}
-.testimonial-slider .avatar
-{
-    overflow: hidden;
-
-    width: 82px;
-    height: 82px;
-    margin: 0 auto;
-
-    vertical-align: middle;
-
-    border: solid 3px #fff;
-    border-radius: 50%;
-    background-color: #fff;
-}
-.testimonial-slider .avatar img
-{
-    width: 82px;
-    height: auto;
-}
-.testimonial-slider h2
-{
-    font-size: 40px;
-    font-weight: 300;
-    font-style: italic;
-
-    margin: 30px 0; 
-
-    color: #fff;
-}
-.testimonial-slider p
-{
-    letter-spacing: 2px; 
-    text-transform: uppercase;
-
-    color: #acb1b4;
-}
-
-/* ==========================================================================
-Sign up form
-========================================================================== */
-.sign-up .signup-form .sign-up-btn
-{
-    font-size: 13px; 
-
-    width: 80%;
-    padding: 15px 0;
-
-    border-radius: 3px;
-}
-.sign-up .signup-form .form-input-group
-{
-    position: relative; 
-
-    width: 80%;
-    height: 55px;
-    margin: 0 auto 10px;
-
-    text-align: left;
-
-    border: solid 1px #e6e9ea;
-    border-radius: 5px;
-}
-.sign-up .signup-form .form-input-group i
-{
-    font-size: 14px; 
-
-    color: #ff5274;
-}
-.sign-up .signup-form .form-input-group i:after
-{
-    position: absolute;
-    top: 50%;
-    left: 30px;
-
-    width: 1px;
-    height: 30px;
-
-    content: '';
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%); 
-
-    border-right: solid 1px #e6e9ea;
-}
-.sign-up .signup-form .form-input-group i.fa-lock
-{
-    font-size: 18px;
-
-    position: absolute;
-    top: 50%;
-
-    margin-left: 20px; 
-
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-}
-.sign-up .signup-form .form-input-group i.fa-envelope
-{
-    font-size: 14px;
-
-    position: absolute;
-    top: 50%;
-
-    margin-left: 20px; 
-
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-}
-.sign-up .signup-form .form-input-group input
-{
-    width: 100%;
-    height: 100%;
-    padding-left: 68px;
-
-    border: none; 
-    border-radius: 6px;
-}
-.sign-up .signup-form .form-input-group input::-webkit-input-placeholder
-{
-    color: #bcc1c3;
-}
-.sign-up .signup-form .form-input-group input:-moz-placeholder
-{
-    color: #bcc1c3;
-}
-.sign-up .signup-form .form-input-group input::-moz-placeholder
-{
-    color: #bcc1c3;
-}
-.sign-up .signup-form .form-input-group input:-ms-input-placeholder
-{
-    color: #bcc1c3;
-}
-
 
 
 
@@ -1019,21 +754,17 @@ header .member-actions
             width: 706px;
             height: 1002px;
 
-            background: url('../../assets/ipad-device.png') no-repeat center center;
+            background: url('../../assets/java.png') no-repeat center center;
             background-size: 40%;
         }
-
-        .features .iphone-wrap
+        .features .ipad1-wrap
         {
-            position: absolute;
-            z-index: 2;
-            bottom: 129px;
-            left: 350px;
+            z-index: 1;
 
-            width: 304px;
-            height: 617px;
+            width: 706px;
+            height: 1002px;
 
-            background: url('../../assets/iphone6.png') no-repeat center center;
+            background: url('../../assets/java.png') no-repeat center center;
             background-size: 40%;
         }
 

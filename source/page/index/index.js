@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-07 23:07:05
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-09 19:37:08
+* @Last Modified time: 2017-09-14 21:59:14
 */
 require('./index.css');
 var page = {
@@ -61,12 +61,17 @@ var page = {
             offset: '75%'
         });
         $('.wp2').waypoint(function() {
-            $('.wp2').addClass('animated fadeInUp');
+            $('.wp2').addClass('animated fadeInRight');
         }, {
             offset: '75%'
         });
         $('.wp3').waypoint(function() {
-            $('.wp3').addClass('animated fadeInRight');
+            $('.wp3').addClass('animated fadeInUp');
+        }, {
+            offset: '75%'
+        });
+        $('.wp4').waypoint(function() {
+            $('.wp4').addClass('animated fadeInRight');
         }, {
             offset: '75%'
         });
