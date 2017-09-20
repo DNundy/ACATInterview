@@ -2,13 +2,13 @@
 * @Author: Administrator
 * @Date:   2017-09-09 20:29:04
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-20 11:09:00
+* @Last Modified time: 2017-09-20 15:07:16
 */
 body
 {
     margin: 0;
 
-    background: url(../../assets/applyBg.jpg) no-repeat center center;
+    background: url('http://owkgm4wri.bkt.clouddn.com/applyBg.jpg') no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
 }

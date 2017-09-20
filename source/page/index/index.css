@@ -243,7 +243,7 @@ Features-stack
     width: 706px;
     height: 1002px;
 
-    background: url('../../assets/java.png') no-repeat center top;
+    background: url('http://owkgm4wri.bkt.clouddn.com/java.png') no-repeat center top;
 }
 .features .ipad1-wrap
 {
@@ -252,7 +252,7 @@ Features-stack
     width: 706px;
     height: 1002px;
 
-    background: url('../../assets/php.png') no-repeat center top;
+    background: url('http://owkgm4wri.bkt.clouddn.com/php.png') no-repeat center top;
 }
 .features .device-showcase
 {
@@ -297,7 +297,7 @@ Features-stack
     width: 916px;
     height: 540px;
 
-    background: url('../../assets/web.png') no-repeat center center;
+    background: url('http://owkgm4wri.bkt.clouddn.com/web.png') no-repeat center center;
 }
 .features-extra1 .macbook1-wrap
 {
@@ -309,7 +309,7 @@ Features-stack
     width: 916px;
     height: 540px;
 
-    background: url('../../assets/cpython.png') no-repeat center center;
+    background: url('http://owkgm4wri.bkt.clouddn.com/cpython.png') no-repeat center center;
 }
 #summary
 {
@@ -325,7 +325,7 @@ Features-stack
     margin-top: 120px;
     padding-bottom: 190px;
 
-    background: #333844 url('../../assets/polygonal-bg.jpg') no-repeat center center;
+    background: #333844 url('http://owkgm4wri.bkt.clouddn.com/polygonal-bg.jpg') no-repeat center center;
 }
 .hero-strip h2
 {
@@ -762,7 +762,7 @@ header .member-actions
             width: 706px;
             height: 1002px;
 
-            background: url('../../assets/java.png') no-repeat center center;
+            background: url('http://owkgm4wri.bkt.clouddn.com/java.png') no-repeat center center;
             background-size: 40%;
         }
         .features .ipad1-wrap
@@ -772,7 +772,7 @@ header .member-actions
             width: 706px;
             height: 1002px;
 
-            background: url('../../assets/java.png') no-repeat center center;
+            background: url('http://owkgm4wri.bkt.clouddn.com/php.png') no-repeat center center;
             background-size: 40%;
         }
         .features
@@ -798,7 +798,7 @@ Icon font (http://www.elegantthemes.com/blog/freebie-of-the-week/free-line-style
     font-style: normal; 
 
     src: url('../../assets/et-line.eot');
-    src: url('../../assets/et-line.eot?#iefix') format('embedded-opentype'), url('../../assets/et-line.woff') format('woff'), url('../../assets/et-line.ttf') format('truetype'), url('../../assets/et-line.svg#et-line') format('svg');
+    src: url('../../assets/et-line.eot?#iefix') format('embedded-opentype'), url('../../assets/et-line.ttf') format('truetype'), url('../../assets/et-line.svg#et-line') format('svg');
 }
 [data-icon]:before
 {

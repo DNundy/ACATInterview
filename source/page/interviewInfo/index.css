@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-10 11:37:52
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-20 11:09:27
+* @Last Modified time: 2017-09-20 15:07:54
 */
 @media screen and (max-width:1200px)
 {
@@ -300,7 +300,7 @@ body
 
     margin: 0;
 
-    background: url(../../assets/applyBg.jpg) no-repeat center center;
+    background: url('http://owkgm4wri.bkt.clouddn.com/applyBg.jpg') no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
 }

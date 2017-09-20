@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-07 20:39:02
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-20 12:17:10
+* @Last Modified time: 2017-09-20 13:58:48
 */
 var webpack				= require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
@@ -112,6 +112,7 @@ var config = {
 				{
 					loader: 'url-loader',
 					options: {
+						limit: 100,
 						name: 'assets/[name].[ext]'
 					}
 				}
