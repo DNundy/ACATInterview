@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-07 20:39:02
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-20 11:50:13
+* @Last Modified time: 2017-09-20 12:17:10
 */
 var webpack				= require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
@@ -41,7 +41,7 @@ var config = {
 
 	output : {
 		path 			: path.resolve(__dirname,"public"),/*必须是绝对路径*/
-		publicPath 		: '/System/public/',
+		publicPath 		: '/',
 		filename 		: "js/[name].js"
 	},
 
