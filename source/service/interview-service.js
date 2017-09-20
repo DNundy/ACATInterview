@@ -2,13 +2,13 @@
 * @Author: Administrator
 * @Date:   2017-09-09 15:27:50
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-14 18:53:23
+* @Last Modified time: 2017-09-20 09:09:56
 */
 var _tool = require('tool/baseTool.js');
 var _interview = {
 	applySubmit : function(data,resolve, reject){
         _tool.request({
-            url     : _tool.getServerUrl('server/interview/apply.php'),
+            url     : _tool.getServerUrl('interview/apply.php'),
             data 	: data,
             method  : 'post',
             success : resolve,
@@ -17,7 +17,7 @@ var _interview = {
     },
     checkSession : function(resolve, reject){
         _tool.request({
-            url     : _tool.getServerUrl('server/interview/examiners-session-check.php'),
+            url     : _tool.getServerUrl('interview/examiners-session-check.php'),
             method  : 'post',
             success : resolve,
             error   : reject
@@ -25,7 +25,7 @@ var _interview = {
     },
     checkInterview : function(data,resolve, reject) {
         _tool.request({
-            url     : _tool.getServerUrl('server/interview/examiners-going-check.php'),
+            url     : _tool.getServerUrl('interview/examiners-going-check.php'),
             data    : data,
             method  : 'post',
             success : resolve,
@@ -34,7 +34,7 @@ var _interview = {
     },
     interviewGoing : function(data,resolve, reject) {
         _tool.request({
-            url     : _tool.getServerUrl('server/interview/examiners-begin.php'),
+            url     : _tool.getServerUrl('interview/examiners-begin.php'),
             data    : {
                 status : data
             },
@@ -45,7 +45,7 @@ var _interview = {
     },
     loginOut : function (resolve,reject) {
         _tool.request({
-            url     : _tool.getServerUrl('server/interview/logout.php'),
+            url     : _tool.getServerUrl('interview/logout.php'),
             method  : 'post',
             success : resolve,
             error   : reject
@@ -53,7 +53,7 @@ var _interview = {
     },
     loginIn : function (passphrase,resolve,reject) {
         _tool.request({
-            url     : _tool.getServerUrl('server/interview/group_login.php'),
+            url     : _tool.getServerUrl('interview/group_login.php'),
             method  : 'post',
             data    : {
                 passphrase : passphrase
@@ -64,7 +64,7 @@ var _interview = {
     },
     saveInfo : function (data,resolve,reject) {
         _tool.request({
-            url     : _tool.getServerUrl('server/interview/save_info.php'),
+            url     : _tool.getServerUrl('interview/save_info.php'),
             method  : 'post',
             data    : data,
             success : resolve,
@@ -73,7 +73,7 @@ var _interview = {
     },
     signIn : function (data,resolve,reject) {
         _tool.request({
-            url     : _tool.getServerUrl('server/interview/dis_interview.php'),
+            url     : _tool.getServerUrl('interview/dis_interview.php'),
             method  : 'post',
             data    : data,
             success : resolve,
@@ -82,7 +82,7 @@ var _interview = {
     },
     flow : function (resolve,reject) {
         _tool.request({
-            url     : _tool.getServerUrl('server/interview/flow.php'),
+            url     : _tool.getServerUrl('interview/flow.php'),
             method  : 'post',
             success : resolve,
             error   : reject
@@ -90,7 +90,7 @@ var _interview = {
     },
     results : function (resolve,reject) {
         _tool.request({
-            url     : _tool.getServerUrl('server/interview/results.php'),
+            url     : _tool.getServerUrl('interview/results.php'),
             method  : 'post',
             success : resolve,
             error   : reject
