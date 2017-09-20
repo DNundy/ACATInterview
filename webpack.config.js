@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-09-07 20:39:02
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-19 22:16:29
+* @Last Modified time: 2017-09-20 11:50:13
 */
 var webpack				= require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
@@ -17,7 +17,11 @@ var getHtmlConfig 		= function (name,title) {
 		inject 			: "true",
 		hash 			: "true",
 		title 			: title,
-		chunks 			: ["common",name]
+		chunks 			: ["common",name],
+		minify 			: {
+			removeComments 		: true,
+			collapseWhitespace 	: true
+		}
 	};
 }
 
@@ -37,7 +41,7 @@ var config = {
 
 	output : {
 		path 			: path.resolve(__dirname,"public"),/*必须是绝对路径*/
-		publicPath 		: '/',
+		publicPath 		: '/System/public/',
 		filename 		: "js/[name].js"
 	},
 
@@ -62,6 +66,14 @@ var config = {
 		new webpack.optimize.CommonsChunkPlugin({
 			name : 		"common",
 			filename : 	"js/common.js"
+		}),
+		new webpack.optimize.UglifyJsPlugin({
+			output: {
+				comments: false,
+			},
+			compress: {
+				warnings: false
+			}
 		}),
 		new htmlWebpackPlugin(getHtmlConfig('index',"首页")),
 		new htmlWebpackPlugin(getHtmlConfig('apply',"加入我们")),
@@ -112,6 +124,7 @@ var config = {
 					loader: 'html-loader',
 					options: {
 				        minimize: true,
+				        removeComments: true,
 				        removeAttributeQuotes: false
 					}
 				}

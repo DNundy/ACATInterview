@@ -2,57 +2,75 @@
 * @Author: Administrator
 * @Date:   2017-09-09 20:29:04
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-09 21:00:44
+* @Last Modified time: 2017-09-20 11:09:00
 */
-body{
+body
+{
     margin: 0;
+
     background: url(../../assets/applyBg.jpg) no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
 }
-.wrap {
+.wrap
+{
     width: 30%;
     height: 60%;
     margin: 2em auto 0;
 }
-.wrap button{
-    outline: none !important;
+.wrap button
+{
     margin: 15% 0 15%;
+
+    outline: none !important;
 }
-.to-top{
+.to-top
+{
     display: none;
 }
-#quit{
-	color: white;
-	border: 1px solid #EB7F52;
-	background: #EB7F52;
+#quit
+{
+    color: white;
+    border: 1px solid #eb7f52;
+    background: #eb7f52;
 }
-#quit:hover{
-	box-shadow: 1px 1px 1px #fff;
+#quit:hover
+{
+    box-shadow: 1px 1px 1px #fff;
 }
 
-@media(max-width:1280px){
-    .wrap {
+@media(max-width:1280px)
+{
+    .wrap
+    {
         width: 90%;
     }
 }
-@media(max-width:1080px){
-    .wrap {
+@media(max-width:1080px)
+{
+    .wrap
+    {
         width: 70%;
     }
 }
-@media(max-width:900px){
-    .wrap {
+@media(max-width:900px)
+{
+    .wrap
+    {
         width: 80%;
     }
 }
-@media(max-width:667px){
-    .wrap {
+@media(max-width:667px)
+{
+    .wrap
+    {
         width: 90%;
     }
 }
-@media(max-width:600px){
-    body {
+@media(max-width:600px)
+{
+    body
+    {
         padding: 0;
     }
 }
