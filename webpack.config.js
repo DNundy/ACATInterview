@@ -40,8 +40,8 @@ var config = {
 	},
 
 	output : {
-		path 			: path.resolve(__dirname,"public"),/*必须是绝对路径*/
-		publicPath 		: '/',
+		path 			: path.resolve(__dirname,"ACATinterview"),/*必须是绝对路径*/
+		publicPath 		: '/ACATinterview/',
 		filename 		: "js/[name].js"
 	},
 

@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2017-09-09 20:18:47
-* @Last Modified by:   Administrator
-* @Last Modified time: 2017-09-10 13:50:36
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2017-10-28 08:29:15
 */
 require('./index.css');
 var _tool 		= require('tool/baseTool.js');
@@ -23,31 +23,13 @@ var page = {
 	bindEvent : function () {
 		var _this = this;
 		$("#obtn1").click(function(){
-			_interview.checkInterview({
-				status : 0
-			},function (res) {
-				window.location.href="onGoing.html?status=0";
-			},function (msg) {
-				_tool.tips(msg);
-			})
+			window.location.href="onGoing.html?status=0";
 		}); 
 		$("#obtn2").click(function(res){
-			_interview.checkInterview({
-				status : 2
-			},function (res) {
-				window.location.href="onGoing.html?status=2";
-			},function (msg) {
-				_tool.tips(msg);
-			})
+			window.location.href="onGoing.html?status=2";
 		}); 
 		$("#obtn3").click(function(res){
-			_interview.checkInterview({
-				status : 4
-			},function (res) {
-				window.location.href="onGoing.html?status=4";
-			},function (msg) {
-				_tool.tips(msg);
-			})
+			window.location.href="onGoing.html?status=4";
 		});
 		$("#quit").click(function(){
 			_interview.loginOut(function (res) {
